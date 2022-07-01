@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "buffer": "^6.0.3",
     "core-js": "^3.8.3",
     "tonweb": "0.0.50",
     "tonweb-mnemonic": "^1.0.1",

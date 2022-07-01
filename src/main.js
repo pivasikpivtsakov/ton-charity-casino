@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // TonWeb is JavaScript SDK (Web and NodeJS) for TON
-//хуй
 import TonWeb from 'tonweb';
 
 // For calculations in the blockchain, we use BigNumber (BN.js). https://github.com/indutny/bn.js
@@ -22,8 +21,9 @@ const providerUrl = 'https://testnet.toncenter.com/api/v2/jsonRPC';
 const apiKey = 'af53a2a88c3887efec9cde406b792901a7073d8ae4c34ad21deef23242c92b11';
 const tonweb = new TonWeb(new TonWeb.HttpProvider(providerUrl, {apiKey})); // Initialize TON SDK
 
-App.prototype.$tonweb = tonweb;
-App.prototype.$BN = BN;
-App.prototype.$toNano = toNano;
+const app = createApp(App);
+app.mount('#app');
 
-createApp(App).mount('#app')
+app.provide('$tonweb', tonweb);
+app.provide('$BN', BN);
+app.provide('$toNano', toNano);
