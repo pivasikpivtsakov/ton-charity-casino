@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // TonWeb is JavaScript SDK (Web and NodeJS) for TON
-
+//хуй
 import TonWeb from 'tonweb';
 
 // For calculations in the blockchain, we use BigNumber (BN.js). https://github.com/indutny/bn.js
