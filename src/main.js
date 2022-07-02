@@ -17,7 +17,7 @@ const BN = TonWeb.utils.BN;
 const toNano = TonWeb.utils.toNano;
 
 // ключи для тона будут здесь и доступны везде, стуктуру не придумал, мне похуй
-const tonkeys = {};
+const tonkeys = null;
 
 const providerUrl = 'https://testnet.toncenter.com/api/v2/jsonRPC';
 // don't fuckin care bout obscuring credentials
