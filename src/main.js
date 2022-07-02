@@ -22,8 +22,7 @@ const apiKey = 'af53a2a88c3887efec9cde406b792901a7073d8ae4c34ad21deef23242c92b11
 const tonweb = new TonWeb(new TonWeb.HttpProvider(providerUrl, {apiKey})); // Initialize TON SDK
 
 const app = createApp(App);
+app.config.globalProperties.$tonweb = tonweb;
+app.config.globalProperties.$BN = BN;
+app.config.globalProperties.$toNano = toNano;
 app.mount('#app');
-
-app.provide('$tonweb', tonweb);
-app.provide('$BN', BN);
-app.provide('$toNano', toNano);

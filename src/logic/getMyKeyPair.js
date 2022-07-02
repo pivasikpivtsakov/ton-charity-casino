@@ -11,3 +11,5 @@ const getMyKeyPair = async (mnemonic, password) => {
     }
     return await mnemonicToKeyPair(mnemonic, password);
 }
+
+export {getMyKeyPair};
