@@ -28,12 +28,15 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
     <h3>{{v}}</h3>
+    <words-login/>
   </div>
 </template>
 
 <script>
+import WordsLogin from "@/components/WordsLogin";
 export default {
   name: 'HelloWorld',
+  components: {WordsLogin},
   props: {
     msg: String
   },

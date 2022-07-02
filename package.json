@@ -38,7 +38,8 @@
     "rules": {
       "no-unused-vars": "warn",
       "no-unused-expressions": "warn",
-      "no-unused-labels": "warn"
+      "no-unused-labels": "warn",
+      "vue/require-v-for-key": "warn"
     }
   },
   "browserslist": [
