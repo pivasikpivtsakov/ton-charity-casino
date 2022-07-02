@@ -24,6 +24,7 @@ export default {
       let kp;
       try {
         kp = await getMyKeyPair(this.words);
+        this.$tonkeys = kp;
         console.log(kp);
       } catch (e) {
         console.log(e);
