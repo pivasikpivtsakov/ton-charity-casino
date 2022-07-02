@@ -3,7 +3,7 @@
     <input class="singleword" v-for="i in 24" :key="i" v-model="words[i-1]">
   </div>
   <button v-on:click="login">Login</button>
-  <div v-if="$tonkeys">
+  <div v-if="showPay">
     <button v-on:click="sendMoney">Send Nudes</button>
   </div>
 </template>
@@ -48,6 +48,7 @@ export default {
 
     return {
       words,
+      showPay: false,
     }
   },
   methods: {
@@ -56,7 +57,8 @@ export default {
       try {
         kp = await getMyKeyPair(this.words);
         this.$tonkeys = kp;
-        console.log(kp);
+        console.log(this.$tonkeys);
+        this.showPay = true;
       } catch (e) {
         // случай в казино добавь сюда тост типа не залогинился
         console.log(e);

@@ -60,10 +60,10 @@ const makePayment = async (tonweb, keyPairA, publicKeyB, amount) => {
 
     // пивцак здесь падает
 
-    // await fromWalletA
-    //     .deploy()
-    //     .send(toNano('0.05'));
-    //
+    await fromWalletA
+        .deploy()
+        .send(toNano('0.05'));
+
     // // To check you can use blockchain explorer https://testnet.tonscan.org/address/<CHANNEL_ADDRESS>
     // // We can also call get methods on the channel (it's free) to get its current data.
     //
