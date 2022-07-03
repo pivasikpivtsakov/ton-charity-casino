@@ -1,13 +1,16 @@
 <template>
-
-  <div class="absolute w-full h-full bg-neutral-800">
-    <WordsLogin/>
-  </div>
+  <div class="absolute w-full h-full bg-neutral-800 flex flex-col justify-around items-center">
 
 
-  <!-- верся тоншеба не трогать -->
-  <div>
-    <h3 class="absolute bottom-0 w-full bg-green-800 text-green-200 text-center">tonweb ver. {{v}}</h3>
+    <WordsLogin v-if="showLogin"/>
+    
+    <!-- заглушка дадаа -->
+    <div></div>
+    <!-- верся тоншеба не трогать -->
+    <div class="absolute bottom-0 w-full bg-green-800 text-green-100 text-center">
+      <h3>tonweb ver. {{v}}</h3>
+    </div>
+
   </div>
 
 </template>
@@ -25,6 +28,7 @@ export default {
   data () {
     return {
       v: this.$tonweb.version,
+      showLogin: true,
     }
   },
 }
