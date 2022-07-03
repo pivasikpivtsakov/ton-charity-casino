@@ -1,13 +1,16 @@
 <template>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <CheckoutPage/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import CheckoutPage from "@/components/CheckoutPage";
 
 export default {
   name: 'App',
   components: {
+    CheckoutPage,
     HelloWorld
   }
 }
