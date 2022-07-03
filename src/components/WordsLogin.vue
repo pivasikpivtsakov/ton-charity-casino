@@ -1,11 +1,53 @@
 <template>
-  <div class="wordgrid">
-    <input class="singleword" v-for="i in 24" :key="i" v-model="words[i-1]">
+
+  <div class="max-w-fit h-1/2 flex flex-col items-center space-y-6">
+
+    <!-- табица -->
+    <div class="grid grid-cols-4">
+
+      <div v-for="i in 24" :key="i" class="relative flex">
+
+        <p class="absolute flex top-1.5 left-2 text-green-600 z-20 text-xs font-bold">
+          {{i}}
+        </p>
+
+        <input v-model="words[i-1]"
+          class="relative flex m-1 h-10 w-28 text-center
+          bg-neutral-700 border-0
+          placeholder-neutral-800 
+          text-neutral-900 font-bold
+
+          focus:outline-none focus:border-2 focus:border-green-600 
+          focus:ring-green-600 focus:text-green-600 rounded-md focus:ring-1 
+
+          hover:bg-neutral-600
+          hover:text-green-600
+          " 
+          >
+
+      </div>
+
+    </div>
+
+    <button v-on:click="login"
+    class="inline-block px-6 py-2 bg-green-neutral-800 border-4 border-green-600 
+      text-white font-medium text-xs 
+      leading-tight uppercase rounded-full shadow-md font-bold
+      hover:bg-green-600 hover:shadow-lg 
+      focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 
+      active:bg-green-700 active:shadow-lg 
+
+      transition duration-150 ease-in-out"
+    >
+      Log In
+    </button>
+
+    <div v-if="showPay">
+      <button v-on:click="sendMoney">Send Nudes</button>
+    </div>
+
   </div>
-  <button v-on:click="login">Login</button>
-  <div v-if="showPay">
-    <button v-on:click="sendMoney">Send Nudes</button>
-  </div>
+
 </template>
 
 <script>
@@ -14,43 +56,24 @@ import {makePayment} from "@/logic/makePayment";
 
 export default {
   name: "WordsLogin",
+
   data() {
     let words = [];
     for (let i = 0; i < 24; i++) {
       words.push('');
     }
-
     //mock
-    words[0] = 'stairs';
-    words[1] = 'route';
-    words[2] = 'bleak';
-    words[3] = 'rocket';
-    words[4] = 'now';
-    words[5] = 'tuna';
-    words[6] = 'globe';
-    words[7] = 'frown';
-    words[8] = 'mimic';
-    words[9] = 'grit';
-    words[10] = 'faint';
-    words[11] = 'resist';
-    words[12] = 'truly';
-    words[13] = 'reduce';
-    words[14] = 'model';
-    words[15] = 'lamp';
-    words[16] = 'bind';
-    words[17] = 'coffee';
-    words[18] = 'rose';
-    words[19] = 'odor';
-    words[20] = 'tiny';
-    words[21] = 'blind';
-    words[22] = 'total';
-    words[23] = 'second';
+    words = [ 'stairs','route','bleak','rocket','now','tuna',
+    'globe','frown','mimic','grit', 'faint', 'resist', 
+    'truly', 'reduce', 'model', 'lamp', 'bind', 'coffee', 
+    'rose', 'odor', 'tiny', 'blind', 'total', 'second']
 
     return {
       words,
       showPay: false,
     }
   },
+
   methods: {
     async login(event) {
       let kp;
@@ -77,11 +100,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.wordgrid {
-  display: grid;
-  grid-template-columns: 100px 100px;
-  gap: 1rem;
-}
-</style>
