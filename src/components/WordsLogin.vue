@@ -65,10 +65,30 @@ export default {
       words.push('');
     }
     //mock
-    words = [ 'stairs','route','bleak','rocket','now','tuna',
-    'globe','frown','mimic','grit', 'faint', 'resist', 
-    'truly', 'reduce', 'model', 'lamp', 'bind', 'coffee', 
-    'rose', 'odor', 'tiny', 'blind', 'total', 'second']
+    words = [ "slab",
+      "assume",
+      "amazing",
+      "kangaroo",
+      "luxury",
+      "twice",
+      "ladder",
+      "silver",
+      "gather",
+      "impact",
+      "police",
+      "plastic",
+      "put",
+      "wonder",
+      "target",
+      "stay",
+      "whisper",
+      "tide",
+      "upset",
+      "plunge",
+      "property",
+      "barely",
+      "couple",
+      "predict"]
 
     return {
       words,
