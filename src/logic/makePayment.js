@@ -1,3 +1,4 @@
+/* eslint-disable */
 import TonWeb from 'tonweb';
 
 function getRandomInt(min, max) {
