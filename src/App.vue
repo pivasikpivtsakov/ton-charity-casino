@@ -2,9 +2,11 @@
 	<div class="absolute top-0 w-full h-full bg-neutral-800 flex flex-col justify-around items-center">
 
 
-		<WordsLogin v-if="showLogin"/>
+		<WordsLogin v-if="showLogin" />
 
-		<CheckoutPage v-if="showCheckout"/>
+		<CheckoutPage v-if="showCheckout" />
+
+		<ThanksNigga v-if="showNigga" />
 
 		<!-- заглушка дадаа -->
 		<div></div>
@@ -18,21 +20,24 @@
 </template>
 
 <script>
-import WordsLogin from "@/components/WordsLogin";
+import WordsLogin from "@/components/WordsLogin.vue";
 import CheckoutPage from "@/components/CheckoutPage.vue";
+import ThanksNigga from "@/components/ThanksNigga.vue"
 
 export default {
 	name: 'App',
 	components: {
 		WordsLogin,
-		CheckoutPage
+		CheckoutPage,
+		ThanksNigga
 	},
 
 	data () {
 		return {
 		v: this.$tonweb.version,
 		showLogin: false,
-		showCheckout: true,
+		showCheckout: false,
+		showNigga: true
 		}
 	},
 
