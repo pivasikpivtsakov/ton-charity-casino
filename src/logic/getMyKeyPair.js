@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {isPasswordNeeded, mnemonicToKeyPair, validateMnemonic} from 'tonweb-mnemonic';
 
 const getMyKeyPair = async (mnemonic, password) => {
