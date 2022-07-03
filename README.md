@@ -1,4 +1,4 @@
-# ton-charity-casino
+# cumming
 
 ## Project setup
 ```
