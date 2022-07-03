@@ -32,7 +32,6 @@ export default {
 		ThanksNigga
 	},
 
-<<<<<<< HEAD
 	data () {
 		return {
 		v: this.$tonweb.version,
@@ -48,21 +47,3 @@ export default {
 	}
 }
 </script>
-=======
-  data () {
-    return {
-      v: this.$tonweb.version,
-      showLogin: true,
-    }
-  },
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-</style>
->>>>>>> origin/a

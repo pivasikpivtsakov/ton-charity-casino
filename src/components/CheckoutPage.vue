@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 	<div class="max-w-fit h-1/2 flex flex-col items-center space-y-6">
 		<h3 class="header-checkout">Checkout</h3>
 		<div class="content-wrap">
@@ -42,42 +41,15 @@
 			</article>
 		</div>
 	</div>
-=======
-  <div class="container bg-neutral-800">
-    <h3 class="header-checkout">Checkout</h3>
-    <div class="content-wrap">
-      <aside class="beer-pic">
-        <img
-          :src="require(`../assets/beer/beer${index+1}.jpg`)"
-          alt="beerpic"
-          class="beer-img"/>
-      </aside>
-      <article class="beer-content">
-        <p>{{ beerData.name }}</p>
-        <p>
-          A bottle of beer you can buy with TON and donate a little bit to charity.
-        </p>
-        <p>Price: 1 TON</p>
-        <p>Choose how much you want to donate: </p>
-        <input>
-          <button class="rounded bg-green-800 text-neutral-100 action-button">Buy + donate</button>
-      </article>
-    </div>
-  </div>
->>>>>>> origin/a
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
-	name: "CheckoutPage"
-=======
   name: "CheckoutPage",
   props: {
     beerData: Object,
     index: Number,
   },
->>>>>>> origin/a
 }
 </script>
 
