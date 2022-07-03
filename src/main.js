@@ -4,6 +4,8 @@ import App from './App.vue'
 // TonWeb is JavaScript SDK (Web and NodeJS) for TON
 import TonWeb from 'tonweb';
 
+import './assets/tailwind.css'
+
 // For calculations in the blockchain, we use BigNumber (BN.js). https://github.com/indutny/bn.js
 // Don't use regular {Number} for coins, etc., it has not enough size and there will be loss of accuracy.
 
