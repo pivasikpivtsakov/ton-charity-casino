@@ -6,7 +6,6 @@
     <div class="grid grid-cols-4">
 
       <div v-for="i in 24" :key="i" class="relative flex">
-
         <p class="absolute flex top-1.5 left-2 text-green-600 z-20 text-xs font-bold">
           {{i}}
         </p>
