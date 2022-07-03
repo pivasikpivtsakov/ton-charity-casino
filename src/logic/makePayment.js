@@ -36,8 +36,10 @@ const makePayment = async (tonweb, keyPairA, publicKeyB, amount) => {
         seqnoB: new BN(0)  // initially 0
     };
 
+    const newTsChannelId = ~~(Date.now() / 1000);
+
     const channelConfig = {
-        channelId: new BN(getRandomInt(1, 500)), // Channel ID, for each new channel there must be a new ID
+        channelId: new BN(newTsChannelId), // Channel ID, for each new channel there must be a new ID
         addressA: walletAddressA, // A's funds will be withdrawn to this wallet address after the channel is closed
         addressB: walletAddressB, // B's funds will be withdrawn to this wallet address after the channel is closed
         initBalanceA: channelInitState.balanceA,
@@ -59,10 +61,14 @@ const makePayment = async (tonweb, keyPairA, publicKeyB, amount) => {
     });
 
     // пивцак здесь падает
+    try {
+        const deployer = await fromWalletA.deploy(keyPairA.secretKey);
+        const fee = await deployer.estimateFee();
+        return deployer.send();
 
-    await fromWalletA
-        .deploy()
-        .send(toNano('0.05'));
+    } catch (e) {
+        console.log(e);
+    }
 
     // // To check you can use blockchain explorer https://testnet.tonscan.org/address/<CHANNEL_ADDRESS>
     // // We can also call get methods on the channel (it's free) to get its current data.
