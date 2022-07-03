@@ -17,12 +17,10 @@
 
 <script>
 import WordsLogin from "@/components/WordsLogin";
-import CheckoutPage from "@/components/CheckoutPage";
 
 export default {
   name: 'App',
   components: {
-    CheckoutPage,
     WordsLogin
   },
 
@@ -32,5 +30,10 @@ export default {
       showLogin: true,
     }
   },
+
+  computed: {
+    // если есть тонключ значит залогинились мама родная
+    showMarket: () => this.$tonkeys,
+  }
 }
 </script>
