@@ -4,7 +4,7 @@
     <div class="content-wrap">
       <aside class="beer-pic">
         <img
-          :src="require(`../../assets/beer/beer${index+1}.jpg`)"
+          :src="require(`../assets/beer/beer${index+1}.jpg`)"
           alt="beerpic"
           class="beer-img"/>
       </aside>
