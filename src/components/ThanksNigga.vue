@@ -10,8 +10,8 @@
 	
 
 		<p class="text-green-200 font-semibold text-center">For donating for Charity <br> and buying pivasik</p>
-		<p>You paid: {{beerPrice}} TON</p>
-    <p>And donated: {{donatePrice}} TON</p>
+		<p class="text-slate-100">You paid: {{beerPrice}} TON</p>
+    <p class="text-slate-100">And donated: {{donatePrice}} TON</p>
 		
 		<button class="inline-block px-6 py-2 bg-green-600 border-4 border-green-600 
 			text-white font-medium text-xs 

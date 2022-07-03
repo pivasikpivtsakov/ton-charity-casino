@@ -1,5 +1,5 @@
 <template>
-	<div class="max-w-fit h-1/2 flex flex-col items-center space-y-6">
+	<div class="max-w-fit h-1/2 flex flex-col items-center space-y-6" v-if="!showbought">
 		<h3 class="header-checkout">Checkout</h3>
 		<div class="content-wrap">
 			<aside class="beer-pic">
@@ -43,18 +43,25 @@
 			</article>
 		</div>
 	</div>
+  <thanks-nigga v-if="showbought" :beer-price="beerData.price" :donate-price="'0.001'"></thanks-nigga>
 </template>
 
 <script>
+import ThanksNigga from "@/components/ThanksNigga";
 export default {
   name: "CheckoutPage",
+  components: {ThanksNigga},
   props: {
     beerData: Object,
     index: Number,
   },
+  data () {
+    return {
+    showbought: false,}
+  },
   methods: {
     buy() {
-
+      this.showbought = true;
     }
   }
 }
