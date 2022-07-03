@@ -11,7 +11,7 @@
 		<!-- заглушка дадаа -->
 		<div></div>
 		<!-- верся тоншеба не трогать -->
-		<div class="absolute bottom-0 w-full bg-green-800 text-green-100 text-center">
+		<div class="fixed bottom-0 w-full bg-green-800 text-green-100 text-center">
 			<h3>tonweb ver. {{v}}</h3>
 		</div>
 
@@ -35,9 +35,9 @@ export default {
 	data () {
 		return {
 		v: this.$tonweb.version,
-		showLogin: false,
+		showLogin: true,
 		showCheckout: false,
-		showNigga: true
+		showNigga: false
 		}
 	},
 
