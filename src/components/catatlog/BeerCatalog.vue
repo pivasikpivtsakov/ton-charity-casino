@@ -1,15 +1,21 @@
 <template>
-<div class="grid gap-4 beer_catalog">
- <CatalogCard v-for="(beer,index) in beers" :key="index" :index="index" :beer="beer"/>
-</div>
+  <div class="grid gap-4 beer_catalog">
+    <CatalogCard v-for="(beer,index) in beers" :key="index" :index="index" :beer="beer"
+                 v-on:click="openCheckout(index)"/>
+    <CheckoutPage v-if="showCheckout" :beer-data="beers[selectedIndex]"/>
+  </div>
 </template>
 
 <script>
 import CatalogCard from "@/components/catatlog/CatalogCard";
+import CheckoutPage from "@/components/CheckoutPage";
+
 export default {
-    components: {CatalogCard},
-    data() {
+  components: {CheckoutPage, CatalogCard},
+  data() {
     return {
+      showCheckout: false,
+      selectedIndex: null,
       beers: [
         {
           name: "Beer 1",
@@ -54,11 +60,18 @@ export default {
       ],
     };
   },
+
+  methods: {
+    openCheckout(index, event) {
+      this.selectedIndex = index;
+      this.showCheckout = true;
+    }
+  }
 }
 </script>
 
 <style scoped>
 .beer_catalog {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 </style>

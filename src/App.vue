@@ -30,11 +30,6 @@ export default {
       showLogin: true,
     }
   },
-
-  computed: {
-    // если есть тонключ значит залогинились мама родная
-    showMarket: () => this.$tonkeys,
-  }
 }
 </script>
 

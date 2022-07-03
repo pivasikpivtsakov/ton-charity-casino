@@ -4,11 +4,12 @@
     <div class="content-wrap">
       <aside class="beer-pic">
         <img
-          src="https://www.nicepng.com/png/full/760-7602789_beer-png-images-free-beer-pictures-download-chang.png"
+          :src="beerData.picUrl"
           alt="beerpic"
           class="beer-img"/>
       </aside>
       <article class="beer-content">
+        <p>{{ beerData.name }}</p>
         <p>
           A bottle of beer you can buy with TON and donate a little bit to charity.
         </p>
@@ -23,7 +24,10 @@
 
 <script>
 export default {
-  name: "CheckoutPage"
+  name: "CheckoutPage",
+  props: {
+    beerData: Object,
+  },
 }
 </script>
 
