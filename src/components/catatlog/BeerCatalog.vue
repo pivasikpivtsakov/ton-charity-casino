@@ -2,7 +2,7 @@
   <div class="grid gap-4 beer_catalog">
     <CatalogCard v-for="(beer,index) in beers" :key="index" :index="index" :beer="beer"
                  v-on:click="openCheckout(index)"/>
-    <CheckoutPage v-if="showCheckout" :beer-data="beers[selectedIndex]"/>
+    <CheckoutPage v-if="showCheckout" :beer-data="beers[selectedIndex]" :index="selectedIndex"/>
   </div>
 </template>
 

@@ -4,7 +4,7 @@
     <div class="content-wrap">
       <aside class="beer-pic">
         <img
-          :src="beerData.picUrl"
+          :src="require(`../../assets/beer/beer${index+1}.jpg`)"
           alt="beerpic"
           class="beer-img"/>
       </aside>
@@ -27,6 +27,7 @@ export default {
   name: "CheckoutPage",
   props: {
     beerData: Object,
+    index: Number,
   },
 }
 </script>
