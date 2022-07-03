@@ -41,9 +41,11 @@
       Log In
     </button>
 
-    <div v-if="showPay">
-      <button v-on:click="sendMoney">Send Nudes</button>
-    </div>
+<!--    <div v-if="showPay">-->
+<!--      <button v-on:click="sendMoney">Send Nudes</button>-->
+<!--    </div>-->
+
+    <BeerCatalog v-if="showPay"/>
 
   </div>
 
@@ -52,10 +54,11 @@
 <script>
 import {getMyKeyPair} from "@/logic/getMyKeyPair";
 import {makePayment} from "@/logic/makePayment";
+import BeerCatalog from "@/components/catatlog/BeerCatalog";
 
 export default {
   name: "WordsLogin",
-
+  components: {BeerCatalog},
   data() {
     let words = [];
     for (let i = 0; i < 24; i++) {
