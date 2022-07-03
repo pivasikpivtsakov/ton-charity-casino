@@ -4,16 +4,18 @@
 		<div class="content-wrap">
 			<aside class="beer-pic">
 				<img
-					src="https://www.nicepng.com/png/full/760-7602789_beer-png-images-free-beer-pictures-download-chang.png"
+					:src="require(`../assets/beer/beer${index+1}.jpg`)"
 					alt="beerpic"
 					class="beer-img"/>
 			</aside>
 			<article class="beer-content w-96 text-green-100 flex flex-col items-center justify-around">
+        <p>{{ beerData.name }}</p>
 				<p class="">A bottle of beer you can buy with <strong>TON</strong> <br>and donate a little bit to charity</p>
-				<p>Price: 1 TON</p>
+				<p>Price: {{beerData.price}} TON</p>
 
 				<div class="space-y-1 flex flex-col items-center ">
-					<p class="text-xs">Choose how much you want to donate: </p>
+					<p class="text-sm">Choose how much you want to donate: </p>
+          <p class="text-xs">You can even give 1 nanoton</p>
 					<input class="relative flex m-1 h-10 w-48 text-center
 						bg-neutral-700 border-0
 						placeholder-neutral-800 
@@ -35,7 +37,7 @@
 					active:bg-green-700 active:shadow-lg 
 
 					transition duration-150 ease-in-out"
-				>
+				v-on:click="buy">
 					Buy + donate
 				</button>
 			</article>
@@ -50,6 +52,11 @@ export default {
     beerData: Object,
     index: Number,
   },
+  methods: {
+    buy() {
+
+    }
+  }
 }
 </script>
 

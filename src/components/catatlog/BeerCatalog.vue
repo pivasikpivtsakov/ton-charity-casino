@@ -18,43 +18,43 @@ export default {
       selectedIndex: null,
       beers: [
         {
-          name: "Beer 1",
-          price: 1.99,
+          name: "Armageddon",
+          price: 1.98,
           country: "Belgium",
         },
         {
-          name: "Beer 2",
-          price: 1.99,
+          name: "BRLD",
+          price: 1.99999999,
           country: "USA",
         },
         {
-          name: "Beer 3",
-          price: 1.99,
+          name: "Punk IPA",
+          price: 1.3,
           country: "Germany",
         },
         {
-          name: "Beer 4",
-          price: 1.99,
+          name: "Whatever",
+          price: 1.35,
           country: "Czech Republic",
         },
         {
-          name: "Beer 5",
-          price: 1.99,
+          name: "Okay",
+          price: 0.99,
           country: "USA",
         },
         {
-          name: "Beer 6",
-          price: 1.99,
+          name: "TolyaYaNot was here",
+          price: 6.99,
           country: "Netherlands",
         },
         {
-          name: "Beer 7",
-          price: 1.99,
+          name: "Maybe",
+          price: 2.99,
           country: "Italy",
         },
         {
-          name: "Beer 8",
-          price: 1.99,
+          name: "мы верстаки",
+          price: 1,
           country: "Russia",
         },
       ],
@@ -72,6 +72,6 @@ export default {
 
 <style scoped>
 .beer_catalog {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 300px 300px;
 }
 </style>

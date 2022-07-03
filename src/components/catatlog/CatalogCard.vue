@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col	shadow-black w-full items-center border-2 border-gray-600 rounded-md py-4">
     <img :src="require(`../../assets/beer/beer${index+1}.jpg`)" alt="beerpic" class="beer_ava cursor-pointer mb-4"/>
-    <h2 class="mb-4 cursor-pointer">Beer {{ index }}</h2>
+    <h4 class="mb-4 cursor-pointer">{{ beer.name }}</h4>
     <div class="flex justify-between px-4 w-full">
-        <span class="text-sm font-semibold text-slate-500">{{beer.country}}</span>
-        <span class="text-sm italic decoration-black">{{beer.price}}$</span>
+        <span class="text-sm font-semibold text-slate-100">{{beer.country}}</span>
+        <span class="text-sm italic text-emerald-200">{{beer.price}} TON</span>
     </div>
   </div>
 </template>
@@ -22,5 +22,9 @@ export default {
 <style scoped>
 .beer_ava {
     max-width: 200px;
+}
+h4 {
+  color: white;
+  font-weight: bold;
 }
 </style>

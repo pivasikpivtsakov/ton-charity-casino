@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full bg-neutral-800 flex flex-col justify-around items-center">
+  <div class="w-full h-full bg-neutral-800 flex flex-col justify-around items-center pb-10 pt-20">
 
 
 		<WordsLogin v-if="showLogin" />
@@ -40,10 +40,5 @@ export default {
 		showNigga: false
 		}
 	},
-
-	computed: {
-		// если есть тонключ значит залогинились мама родная
-		showMarket: () => this.$tonkeys,
-	}
 }
 </script>
