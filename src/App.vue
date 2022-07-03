@@ -1,18 +1,15 @@
 <template>
-  <div class="absolute w-full h-full bg-neutral-800 flex flex-col justify-around items-center">
+  <div class="w-full h-full bg-neutral-800 flex flex-col justify-around items-center">
 
 
     <WordsLogin v-if="showLogin"/>
 
-    <!-- заглушка дадаа -->
-    <div></div>
     <!-- верся тоншеба не трогать -->
-    <div class="absolute bottom-0 w-full bg-green-800 text-green-100 text-center">
+    <footer class="sticky bottom-0 w-full bg-green-800 text-green-100 text-center">
       <h3>tonweb ver. {{v}}</h3>
-    </div>
+    </footer>
 
   </div>
-
 </template>
 
 <script>
